@@ -1,0 +1,644 @@
+/* fonts */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+@font-face {
+  font-family: 'Banny Round';
+  font-style: normal;
+  font-weight: normal;
+  src: local("Banny Round"), url("../fonts/Banny-Round.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Banny Light Round';
+  font-style: normal;
+  font-weight: normal;
+  src: local("Banny Light Round"), url("../fonts/Banny-LightRound.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Banny Bold Round';
+  font-style: normal;
+  font-weight: normal;
+  src: local("Banny Bold Round"), url("../fonts/Banny-BoldRound.woff") format("woff");
+}
+
+/*  elements */
+* {
+  background-repeat: no-repeat;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 11px;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+form,
+input {
+  font-family: "Open Sans", sans-serif;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+b {
+  font-weight: 700;
+}
+
+/* headings */
+h1 {
+  font-size: 90px;
+  line-height: 129px;
+}
+
+h2,
+h4 {
+  font-size: 33px;
+  line-height: 52px;
+  color: #000000;
+  margin-bottom: 18px;
+}
+
+h3 {
+  font-size: 33px;
+  line-height: 52px;
+  color: #ffffff;
+  margin-bottom: 9px;
+}
+
+/* classes */
+.heading {
+  font-family: "Banny Round";
+  text-align: center;
+  text-transform: uppercase;
+  background-image: url(../images/line_yellow.png);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  padding-bottom: 7px;
+  position: relative;
+}
+
+.container {
+  max-width: 1340px;
+  margin: 0 auto;
+  min-width: 1100px;
+}
+
+.hidden {
+  visibility: hidden;
+  position: absolute;
+}
+
+/* header section */
+.header {
+  position: relative;
+  min-height: 745px;
+  background-image: url(../images/header_bg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.anchor_image {
+  position: absolute;
+  top: 23px;
+  z-index: 1;
+}
+
+/* -- navigation menu */
+.menu {
+  display: block;
+  padding: 0 0 0 74px;
+  min-height: 163px;
+  width: 1190px;
+  min-width: 1190px;
+  margin: 0 auto;
+  background-image: url(../images/anchor.png);
+  background-repeat: no-repeat;
+  background-position: center 23px;
+}
+
+.menu__item {
+  list-style: none;
+  display: inline-block;
+}
+
+.addspace {
+  margin-right: 202px;
+}
+
+.menu__link {
+  display: inline-block;
+  line-height: 93px;
+  width: 120px;
+}
+
+/* -- timer */
+.timer {
+  height: 64px;
+  width: 240px;
+  color: #EDEDED;
+  background: rgba(196, 196, 196, 0.3);
+  position: absolute;
+  left: -3px;
+  top: 112px;
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 64px;
+}
+
+/* -- title block  */
+.title {
+  margin-top: 140px;
+  text-align: center;
+}
+
+.title__section-title {
+  font-size: 11px;
+  line-height: 13px;
+  letter-spacing: 0.5em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.title__buttons__container {
+  text-align: center;
+  margin-top: 28px;
+  min-height: 68px;
+}
+
+.button {
+  display: inline-block;
+  width: 186px;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 4.65px;
+  border: 1px solid #808080;
+  background-color: transparent;
+  color: #ffffff;
+  margin: 0 18px;
+  padding: 22px 0px;
+  z-index: 20;
+  position: relative;
+}
+
+.button--accent {
+  background-color: #E8C300;
+  border: 1px solid #E8C300;
+}
+
+/*  --social icons */
+.socialicons {
+  width: 56px;
+  position: absolute;
+  right: 73px;
+  top: 317px;
+}
+
+.icon {
+  position: relative;
+  display: inline-block;
+  width: 58px;
+  height: 58px;
+  background-image: url(../images/Ellipse.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.socialicons__facebook::before,
+.socialicons__twitter::before,
+.socialicons__instagram::before {
+  content: "";
+  position: absolute;
+  width: 58px;
+  height: 58px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.socialicons__facebook,
+.socialicons__twitter,
+.socialicons__instagram {
+  margin-bottom: 17px;
+}
+
+.socialicons__facebook::before {
+  background-image: url(../images/icon_facebook.png);
+}
+
+.socialicons__twitter::before {
+  background-image: url(../images/icon_twitter.png);
+}
+
+.socialicons__instagram::before {
+  background-image: url(../images/icon_instagram.png);
+}
+
+.linkdown {
+  text-align: center;
+  margin-top: 76px;
+}
+
+.linkdown__link {
+  position: relative;
+  display: inline-block;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  width: 37px;
+  height: 37px;
+}
+
+.linkdown__link::before {
+  content: "";
+  width: 38px;
+  height: 38px;
+  background-image: url(../images/shevron_down.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 1px;
+  left: 0px;
+  z-index: 30;
+}
+
+.linkdown__link::after {
+  content: "";
+  width: 38px;
+  height: 38px;
+  padding: 10px;
+  background-image: url(../images/Ellipse.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: -10px;
+  left: -11px;
+  z-index: 40;
+}
+
+.schedule {
+  font-weight: bold;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  position: absolute;
+  top: 400px;
+  left: -35px;
+}
+
+/* booking section */
+.booking {
+  min-height: 621px;
+  overflow: hidden;
+}
+
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.form__container {
+  width: 526px;
+}
+
+.booking__form {
+  min-width: 521px;
+  padding-top: 129px;
+}
+
+.booking__image {
+  background-image: url(../images/about-img.png);
+  position: relative;
+  width: 537px;
+  height: 550px;
+  padding: 0;
+  margin: 0;
+}
+
+.booking__image::after {
+  content: "";
+  width: 537px;
+  height: 550px;
+  position: absolute;
+  background-image: url(../images/box_yellow.png);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  top: 70px;
+  left: 290px;
+  z-index: 50;
+}
+
+.booking__input,
+.booking__select {
+  width: 220px;
+  height: 55px;
+  background: #E5E5E5;
+  border-radius: 4.65928px;
+  border: none;
+  margin: 0px 0px 9px 0px;
+  padding: 0 18px 0 18px;
+  font-size: 13px;
+  color: rgba(51, 51, 51, 0.5);
+  font-weight: 700;
+  line-height: 18px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.booking__select {
+  -webkit-appearance: caret;
+  width: 257px;
+  padding: 0px 15px;
+  margin: 0px;
+}
+
+.button--submit {
+  width: 99%;
+  margin: 0 15px 0 0;
+  height: 55px;
+  background: #E8C300;
+  border-radius: 4px;
+  border: none;
+  display: inline-block;
+}
+
+.add--right--margin {
+  margin-right: 5px;
+}
+
+.booking__contacts {
+  text-align: center;
+  font-weight: 500;
+  color: rgba(51, 51, 51, 0.5);
+}
+
+/* specialties section */
+.specialties {
+  min-height: 629px;
+  min-width: 570px;
+  margin: 0 auto;
+  background-image: url(../images/bg_specialtys.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.specialties__title {
+  font-size: 11px;
+  padding: 40px 0px;
+  letter-spacing: 0.5em;
+  text-align: center;
+  margin: 0px auto;
+  text-transform: uppercase;
+}
+
+.slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+.slider__image {
+  background-image: url(../images/img_pancake.png);
+  background-repeat: no-repeat;
+  background-position: right top;
+  position: relative;
+  min-width: 50%;
+  height: 537px;
+  padding: 0;
+  margin: 0;
+  margin-top: -50px;
+}
+
+.slider__image::after {
+  content: "";
+  width: 537px;
+  height: 537px;
+  position: absolute;
+  background-image: url(../images/box_yellow.png);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  top: 80px;
+  right: 153px;
+  z-index: 50;
+}
+
+.slider__textbox {
+  min-width: 50%;
+  margin-top: 100px;
+  text-align: center;
+}
+
+.slider__text {
+  max-width: 505px;
+  font-size: 12px;
+  font-weight: 500;
+  text-align: center;
+  line-height: 22px;
+  color: #ffffff;
+  opacity: 0.9;
+  margin: 0px auto 18px auto;
+}
+
+.slider__text--bigger {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 26px;
+}
+
+.slider__nav {
+  display: block;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  margin-left: -45px;
+}
+
+.slider__dot {
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  background-color: #ffffff;
+  opacity: 0.5;
+  border-radius: 50%;
+  cursor: pointer;
+  margin: 0 9px;
+}
+
+.slider__dot--active {
+  opacity: 1;
+}
+
+/* section foodmenu */
+.foodmenu {
+  color: #000000;
+  padding: 60px 45px 40px 45px;
+  min-width: 1125px;
+}
+
+.foodmenu__introtext {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 26px;
+  text-align: center;
+}
+
+.foodmenu__dishes-list {
+  list-style: none;
+  margin-top: 45px;
+  text-align: center;
+}
+
+.foodmenu__dishes-item {
+  cursor: pointer;
+  width: 111px;
+  height: 46px;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 11px;
+  line-height: 46px;
+  border-right: solid 1px rgba(51, 51, 51, 0.2);
+}
+
+.noborder {
+  border-right: none;
+}
+
+.foodmenu__columns {
+  margin-top: 46px;
+  padding: 0px 0px;
+  -webkit-columns: 320px 3;
+          columns: 320px 3;
+  -webkit-column-gap: 46px;
+          column-gap: 46px;
+}
+
+.foodmenu__item {
+  padding-bottom: 33px;
+}
+
+.foodmenu__item-name {
+  display: inline-block;
+  font-size: 18px;
+  font-family: "Banny Round";
+  margin-right: 8px;
+}
+
+.foodmenu__item-price {
+  display: inline-block;
+  font-size: 17px;
+  font-family: "Banny Round";
+  margin-left: 9px;
+}
+
+.foodmenu__item-description {
+  display: inline-block;
+  text-align: left;
+  font-size: 11px;
+  font-weight: normal;
+  opacity: 0.5;
+}
+
+/* private-events section */
+.private-events {
+  min-height: 584px;
+  background-image: url(../images/bg_private_events.png);
+  background-repeat: no-repeat;
+  text-align: center;
+  padding-top: 45px;
+  overflow: hidden;
+}
+
+.private-events__section-title {
+  font-size: 11px;
+  line-height: 13px;
+  letter-spacing: 0.5em;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.private-events__image {
+  position: relative;
+  width: 537px;
+  height: 550px;
+  padding: 0;
+  margin: 0;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+
+.private-events__image--weddings::after {
+  content: "";
+  width: 537px;
+  height: 300px;
+  position: absolute;
+  background-image: url(../images/box_yellow.png);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  top: 80px;
+  /* left: -56px; */
+  right: 153px;
+  z-index: 50;
+}
+
+.private-events__image--corporate::after {
+  content: "";
+  width: 537px;
+  height: 300px;
+  position: absolute;
+  background-image: url(../images/box_yellow.png);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  top: 70px;
+  left: 290px;
+  z-index: 50;
+}
+
+.private-events__image--weddings {
+  background-image: url(../images/img_weddings.png);
+}
+
+.private-events__image--corporate {
+  background-image: url(../images/img_corporate.png);
+}
+
+.private-events__contacts {
+  opacity: 0.5;
+  margin-top: -25px;
+  font-weight: normal;
+}
+
+.private-events__image-title {
+  position: absolute;
+  font-size: 22px;
+  font-family: "Banny Round";
+  text-transform: uppercase;
+  padding: 25px 0 25px 15px;
+  width: 429px;
+  text-align: left;
+  background-color: #000000;
+  border: none;
+  border-radius: 5px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  left: 240px;
+  top: 232px;
+}
+
+.private-events__image-title--weddings {
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
+  left: -140px;
+  top: 232px;
+}
+/*# sourceMappingURL=styles.css.map */
