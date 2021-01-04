@@ -65,9 +65,9 @@ h3 {
 }
 
 .container {
-    max-width: 1340px;
+    // max-width: 1340px;
     margin: 0 auto;
-    min-width: 1100px;
+    // min-width: 1100px;
     // overflow: hidden;
 }
 
@@ -98,12 +98,12 @@ h3 {
     display: block;
     padding: 0 0 0 74px;
     min-height: 163px;
-    width: 1190px;
-    min-width: 1190px;
+    // width: 1190px;
+    // min-width: 1190px;
     margin: 0 auto;
     background-image: url(../images/anchor.png);
     background-repeat: no-repeat;
-    background-position: center 23px;
+    background-position: center;
 
 }
 
@@ -119,12 +119,11 @@ h3 {
 .menu__link {
     display: inline-block;
     line-height: 93px;
-    width: 120px;
+    // width: 120px;
+    width: 11em;
 }
 
-.menu__linkP{
-
-}
+.menu__linkP {}
 
 /* -- timer */
 
@@ -295,25 +294,29 @@ h3 {
     display: flex;
     margin: 0 auto;
     justify-content: center;
-
+    flex-grow: 1;
 }
 
 .form__container {
-    width: 526px;
+    // width: 526px;
+    width: 50%;
 }
 
 .booking__form {
     min-width: 521px;
     padding-top: 129px;
+    text-align: center;
 }
 
 .booking__image {
     background-image: url(../images/about-img.png);
     position: relative;
-    width: 537px;
+    // width: 537px;
+    width: 50%;
     height: 550px;
     padding: 0;
     margin: 0;
+
 }
 
 .booking__image::after {
@@ -331,8 +334,10 @@ h3 {
 
 .booking__input,
 .booking__select {
-    width: 220px;
-    height: 55px;
+    // width: 220px;
+    width: 17em;
+    // height: 55px;
+    height: 4em;
     background: #E5E5E5;
     border-radius: 4.65928px;
     border: none;
@@ -354,8 +359,8 @@ h3 {
 }
 
 .button--submit {
-    width: 99%;
-    margin: 0 15px 0 0;
+    width: 82%;
+    // margin: 0 15px 0 0;
     height: 55px;
     background: #E8C300;
     border-radius: 4px;
@@ -425,7 +430,7 @@ h3 {
 }
 
 .slider__textbox {
-    min-width: 50%;
+    width: 50%;
     margin-top: 100px;
 
     text-align: center;
@@ -477,7 +482,7 @@ h3 {
 .foodmenu {
     color: $secondary-color;
     padding: 60px 45px 40px 45px;
-    min-width: 1125px;
+    // min-width: 1125px;
 
 }
 
@@ -548,6 +553,7 @@ h3 {
 /* private-events section */
 
 .private-events {
+    // display: flex;
     min-height: 584px;
     background-image: url(../images/bg_private_events.png);
     background-repeat: no-repeat;
@@ -638,4 +644,80 @@ h3 {
     transform: rotate(270deg);
     left: -140px;
     top: 232px;
+}
+
+/* adaptive */ 
+
+@media (max-width:1024px) {
+
+    h1 {
+        font-size: 7em;
+    }
+
+    .heading {
+        padding-bottom: 0px;
+    }
+
+    .menu__link {
+        width: 88px;
+    }
+
+    .booking__input,
+    .booking__select {
+        height: 3em;
+    }
+
+    .booking__input {
+        width: 14em;
+    }
+
+    .booking__select {
+        width: 16.7em;
+    }
+
+    .button {
+        padding: 0px;
+        line-height: 3.5em;
+    }
+
+    .button--submit {
+        width: 40.3em;
+        height: 3.5em;
+        line-height: 3em;
+    }
+
+    .booking__image,
+    .slider__image,
+    .private-events__image--weddings,
+    .private-events__image--corporate {
+        transform: scale(0.8);
+    }
+
+    .slider__textbox {
+        padding-right: 4em;
+    }
+
+    .foodmenu__dishes-list,
+    .foodmenu__columns {
+        margin-top: 15px;
+    }
+
+    .foodmenu__columns {
+        margin-top: 46px;
+        padding: 0px 0px;
+        -webkit-columns: 270px 3;
+        columns: 270px 3;
+        -webkit-column-gap: 46px;
+        column-gap: 46px;
+    }
+
+    .foodmenu__item-name {
+        font-size: 1.3em;
+        margin-right: 0px;
+    }
+
+    .foodmenu__item-price {
+        font-size: 1.3em;
+        margin-right: 0px;
+    }
 }
