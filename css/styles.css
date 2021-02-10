@@ -82,9 +82,8 @@ h3 {
 }
 
 .container {
-  max-width: 1340px;
   margin: 0 auto;
-  min-width: 1100px;
+  max-width: 1342px;
 }
 
 .hidden {
@@ -109,15 +108,15 @@ h3 {
 
 /* -- navigation menu */
 .menu {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   padding: 0 0 0 74px;
   min-height: 163px;
-  width: 1190px;
-  min-width: 1190px;
   margin: 0 auto;
   background-image: url(../images/anchor.png);
   background-repeat: no-repeat;
-  background-position: center 23px;
+  background-position: center;
 }
 
 .menu__item {
@@ -132,7 +131,7 @@ h3 {
 .menu__link {
   display: inline-block;
   line-height: 93px;
-  width: 120px;
+  width: 11em;
 }
 
 /* -- timer */
@@ -302,21 +301,25 @@ h3 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 .form__container {
-  width: 526px;
+  width: 50%;
 }
 
 .booking__form {
   min-width: 521px;
   padding-top: 129px;
+  text-align: center;
 }
 
 .booking__image {
   background-image: url(../images/about-img.png);
   position: relative;
-  width: 537px;
+  width: 50%;
   height: 550px;
   padding: 0;
   margin: 0;
@@ -337,8 +340,8 @@ h3 {
 
 .booking__input,
 .booking__select {
-  width: 220px;
-  height: 55px;
+  width: 17em;
+  height: 4em;
   background: #E5E5E5;
   border-radius: 4.65928px;
   border: none;
@@ -360,8 +363,7 @@ h3 {
 }
 
 .button--submit {
-  width: 99%;
-  margin: 0 15px 0 0;
+  width: 82%;
   height: 55px;
   background: #E8C300;
   border-radius: 4px;
@@ -431,7 +433,7 @@ h3 {
 }
 
 .slider__textbox {
-  min-width: 50%;
+  width: 50%;
   margin-top: 100px;
   text-align: center;
 }
@@ -480,7 +482,6 @@ h3 {
 .foodmenu {
   color: #000000;
   padding: 60px 45px 40px 45px;
-  min-width: 1125px;
 }
 
 .foodmenu__introtext {
@@ -518,6 +519,7 @@ h3 {
           columns: 320px 3;
   -webkit-column-gap: 46px;
           column-gap: 46px;
+  text-align: center;
 }
 
 .foodmenu__item {
@@ -548,11 +550,10 @@ h3 {
 
 /* private-events section */
 .private-events {
-  min-height: 584px;
   background-image: url(../images/bg_private_events.png);
   background-repeat: no-repeat;
   text-align: center;
-  padding-top: 45px;
+  padding: 45px 0px;
   overflow: hidden;
 }
 
@@ -584,7 +585,6 @@ h3 {
   background-repeat: no-repeat;
   background-position: 0 0;
   top: 80px;
-  /* left: -56px; */
   right: 153px;
   z-index: 50;
 }
@@ -640,5 +640,272 @@ h3 {
           transform: rotate(270deg);
   left: -140px;
   top: 232px;
+}
+
+/* adaptive */
+@media only screen and (max-width: 1024px) {
+  h1 {
+    font-size: 7em;
+  }
+  .menu__link {
+    width: 88px;
+  }
+  .booking__input,
+  .booking__select {
+    height: 3em;
+  }
+  .booking__input {
+    width: 14em;
+  }
+  .booking__select {
+    width: 16.7em;
+  }
+  .button {
+    padding: 0px;
+    line-height: 3.5em;
+  }
+  .button--submit {
+    width: 40.3em;
+    height: 3.5em;
+    line-height: 3em;
+  }
+  .booking__image,
+  .slider__image,
+  .private-events__image--weddings,
+  .private-events__image--corporate {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+  .slider__textbox {
+    padding-right: 4em;
+  }
+  .foodmenu__dishes-list,
+  .foodmenu__columns {
+    margin-top: 15px;
+  }
+  .foodmenu__columns {
+    margin-top: 46px;
+    padding: 0px 0px;
+    -webkit-columns: 270px 3;
+    columns: 270px 3;
+    -webkit-column-gap: 46px;
+    column-gap: 46px;
+  }
+  .foodmenu__item-name {
+    font-size: 1.3em;
+    margin-right: 0px;
+  }
+  .foodmenu__item-price {
+    font-size: 1.3em;
+    margin-right: 0px;
+  }
+}
+
+/* tablet css */
+@media only screen and (max-width: 768px) {
+  .menu__link {
+    width: 51px;
+  }
+  .schedule,
+  .socialicons,
+  .timer,
+  .booking__image,
+  .slider__image {
+    display: none;
+  }
+  .form__container {
+    width: 80%;
+  }
+  .booking__contacts {
+    margin-top: 30px;
+  }
+  .slider__textbox {
+    width: 100%;
+    padding-right: 0px;
+  }
+  .foodmenu__dishes-item {
+    width: 92px;
+  }
+  .private-events {
+    background-color: black;
+    background-position: bottom;
+    padding: 40px 0px;
+  }
+  .private-events__image--weddings::after,
+  .private-events__image--corporate::after {
+    display: none;
+  }
+  .private-events__image--weddings,
+  .private-events__image--corporate {
+    background-size: contain;
+    width: 300px;
+    height: 300px;
+  }
+  .private-events__image-title {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+    left: 0;
+    top: 0;
+    padding: 5px;
+    width: auto;
+    height: auto;
+    background-color: #E8C300;
+    border-radius: 5px;
+  }
+  .private-events__contacts {
+    line-height: 1.3em;
+    padding: 0px 5px;
+    letter-spacing: 0.1em;
+  }
+}
+
+/* mobile css 600px  */
+@media only screen and (max-width: 550px) {
+  .menu,
+  .timer,
+  .schedule,
+  .socialicons,
+  .booking__image,
+  .slider__image {
+    display: none;
+  }
+  .header {
+    min-height: 570px;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-size: 2em;
+    padding: 0px;
+  }
+  .title {
+    margin: 0px;
+    padding: 40px 0px 0px 0px;
+  }
+  .heading {
+    background: none;
+  }
+  .button {
+    margin-bottom: 20px;
+  }
+  .linkdown {
+    text-align: center;
+    margin-top: 100px;
+  }
+  .title__buttons__container {
+    margin-top: 80px;
+  }
+  .booking {
+    padding: 40px 0px;
+    min-height: 470px;
+  }
+  .form__container {
+    width: auto;
+    display: block;
+  }
+  .booking__form {
+    min-width: auto;
+    padding-top: 0px;
+  }
+  .add--right--margin {
+    margin-right: 0px;
+  }
+  .booking__select {
+    margin-bottom: 9px;
+  }
+  .button--submit {
+    width: 218px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+  }
+  .booking__contacts {
+    margin: 0 30px;
+    line-height: 1.2em;
+  }
+  .specialties {
+    min-width: auto;
+    width: auto;
+    min-height: 540px;
+    padding: 0px 0px 40px 0px;
+  }
+  .slider__textbox {
+    width: auto;
+    padding: 0px 20px;
+    margin-top: 0px;
+  }
+  .slider__text--bigger {
+    font-size: 13px;
+  }
+  .slider__nav {
+    margin-bottom: -100px;
+  }
+  .foodmenu {
+    padding: 20px 20px;
+  }
+  .foodmenu__introtext {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.2em;
+  }
+  .foodmenu__dishes-list {
+    margin-top: 30px;
+  }
+  .foodmenu__dishes-item {
+    width: auto;
+    padding: 0px 1px 0px 1px;
+    line-height: normal;
+    height: auto;
+    border: none;
+  }
+  .foodmenu__item {
+    padding-bottom: 15px;
+  }
+  .row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+  }
+  .private-events {
+    background-color: black;
+    background-position: bottom;
+    padding: 40px 0px;
+  }
+  .private-events__image--weddings::after,
+  .private-events__image--corporate::after {
+    display: none;
+  }
+  .private-events__image--weddings,
+  .private-events__image--corporate {
+    background-size: contain;
+    width: 300px;
+    height: 300px;
+  }
+  .private-events__image-title {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+    left: 0;
+    top: 0;
+    padding: 5px;
+    width: auto;
+    height: auto;
+    background-color: #E8C300;
+    border-radius: 5px;
+  }
+  .private-events__contacts {
+    line-height: 1.3em;
+    padding: 0px 5px;
+    letter-spacing: 0.1em;
+  }
+}
+
+@media only screen and (max-width: 280px) {
+  .foodmenu__item-price {
+    font-size: 1em;
+  }
+  .foodmenu__item-name {
+    font-size: 1em;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
