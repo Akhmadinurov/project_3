@@ -1,5 +1,5 @@
 # project_hp
-This project is in development mode. 
+Non commercial, in development mode. 
 Details:
 HTML5/CSS3 (pure),
 SASS/SCSS,
